@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 	<script type="module" src="index.js" defer></script>
 </head>
 <body>
@@ -36,7 +37,77 @@
 		</article>
 	</section>
 	<section id="portfolio">
+		<div class="portfolio-title">
 		<h2>Mes Projets</h2>
+<!-- MODALE -->
+		<button id="openModal"><i class="fa-regular fa-pen-to-square"></i>
+			modifier</button>
+		</div>
+
+
+		<div id="modal" class="modal">
+			<div class="modal-content">
+			<span class="close" id="closeModal">&times;</span>
+
+			<!-- Vue Galerie -->
+			<div class="gallery-view">
+				<h2>Galerie photo</h2>
+				<div class="photo-gallery" id="gallery"></div>
+				<hr class="separator">
+				<button class="btn" id="toAddPhoto">Ajouter une photo</button>
+			</div>
+
+			<!-- Vue Ajout photo -->
+			<div class="add-photo" id="addPhoto">
+				<h2>Ajout photo</h2>
+				<form id="photoForm">
+				<div class="inputAddPhoto">
+					<i id="iconPhoto" class="fa-solid fa-image"></i>
+					<label for="uploadPhoto" class="btnUploadPhoto" id="fileLabel">+ Ajouter photo</label>
+					<input id="uploadPhoto" type="file" accept="image/*" required>
+
+					<p id="sizeInfo">jpg, png : 4mo max</p>
+					<div id="imgPreviewContainer" style="display: none;">
+						<img id="imgPreview" src="" alt="Aperçu de l'image" style="max-width: 80%; max-height: 180px;" name="imgPreview">
+					</div>
+				</div>
+
+				<div class="photoTitle">
+					<label for="photoTitleRequired">Titre</label><br>
+					<input id="photoTitleRequired" type="text" name="photoTitleRequired" required>
+				</div>
+
+				<div class="photoCategory">
+					<label for="photoCategory" id="selectedPhotoCategory">Catégorie</label><br>
+					<select id="photoCategory" name="photoCategory" class="btnDropdown" required></select>
+				</div>
+
+				<hr class="separator">
+				<button type="submit" class="btn" id="btnSubmit" value="Valider">
+				</form>
+			</div>
+			</div>
+		</div>
+
+
+		<!-- modale deuxième vue "Ajouter une photo" -->
+		<!-- <div id="addPhotoModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modaltitle" style="display: none;">
+			<div class="modal-wrapper">
+				<div class="modal-content">
+					<h1 id="modaltitle">Ajouter une photo</h1>
+					<form id="addPhotoForm">
+						<label for="image">Image</label>
+						<input type="file" name="image" id="image">
+						<label for="title">Titre</label>
+						<input type="text" name="title" id="title">
+						<label for="category">Catégorie</label>
+						<input type="text" name="category" id="category">
+						<button type="submit">Ajouter</button>
+					</form>
+					<button id="btnCloseAddPhotoModal" class="btn">Fermer</button>
+				</div>
+			</div> -->
+
 		<div id="menu-categories"></div> <!-- menu catégories filtres -->
 		<div class="gallery">
 			

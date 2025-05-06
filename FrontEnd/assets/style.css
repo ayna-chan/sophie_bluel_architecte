@@ -126,10 +126,7 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
-}
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -249,7 +246,7 @@ footer {
 
 /* <<--- PAGE DE LOGIN --- */
 
-/* page d'accueil boutton */
+/* page d'accueil bouton */
 .category-button {
 	width: auto;
 	padding: 5px 15px;
@@ -271,3 +268,212 @@ footer {
 #menu-categories {
 	text-align: center;
 }
+
+
+/* --- BOITE MODALE --- */
+
+
+
+/* .modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.08);
+} */
+
+
+#openModal {
+	background: none;
+	border: none; 
+ }
+
+
+.portfolio-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
+.portfolio-title h2 {
+	margin: 0;
+}
+
+#modal h2 {
+	text-align: center;
+	font-family: work sans;
+	font-weight: 400;
+	color: black;
+	margin-top: 30px;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.08);
+	overflow: auto;
+  }
+  
+
+.modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 600px;
+	width: 100%;
+	position: relative;
+	
+  }
+
+  .photo-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 3em;
+  }
+
+  .photo-gallery img {
+	width: 90px;
+	object-fit: cover;
+	position: relative;
+  }
+
+  .photo-container {
+	position: relative;
+  }
+
+  .gallery-view {
+	flex-direction: column;
+	justify-content: center;
+  }
+
+/*  --BOUTON SUPPRIMER--  */
+  .delete-btn {
+	position: absolute;
+	top: 5px; 
+	right: 5px; 
+	background-color: black;
+	color: white; 
+	border: none;
+	padding: 4px;
+	border-radius: 3px;
+  }
+
+/* ----- VUE AJOUTER UNE PHOTO ----- */
+  #photoForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 100px;
+  }
+
+  .add-photo {
+	flex-direction: column;
+  }
+  
+  .add-photo h2 {
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: 24px;
+	font-weight: 600;
+  }
+
+.photoTitle, .photoCategory {
+	width: 100%;
+}
+
+
+
+/* Zone d'ajout de photo */
+.inputAddPhoto {
+	background-color: #e8f1f6;
+	border-radius: 2px;
+	text-align: center;
+	padding: 25px 0px;
+	margin-bottom: 25px;
+	width: 100%;
+  }
+  
+  .inputAddPhoto i {
+	font-size: 60px;
+	color: #b9c5cc;
+  }
+  
+  .btnUploadPhoto {
+	display: inline-block;
+	margin-top: 15px;
+	background-color: #cbdbe2;
+	padding: 10px 20px;
+	border-radius: 25px;
+	color: #4a6771;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 14px;
+  }
+  
+  #uploadPhoto {
+	display: none;
+  }
+  
+  #sizeInfo {
+	font-size: 12px;
+	margin-top: 10px;
+  }
+  
+  #imgPreview {
+	max-height: 180px;
+	max-width: 80%;
+  }
+  
+  .photoTitle input, .btnDropdown {
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 20px;
+	border: none;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+
+
+  
+
+  .btn {
+		padding: 10px 50px;
+		border-radius: 20px;
+		background-color: #1D6154;
+		color:white;
+		border: none;
+		margin: 20px auto;
+		font-family: "Syne";
+	}
+
+
+  .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+  }
+
+
+  .separator {
+	border: none;
+	border-top: 1px solid #ccc;
+	margin: 2em 3em;
+  }
+
+  #photoForm .separator {
+	width: 100%;
+  }
