@@ -1,24 +1,3 @@
-// fetch("http://localhost:5678/api/users/login", {
-//     method: "POST",
-//     headers: {
-//         "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify({
-//         email: "string",
-//         password: "string"
-//     })
-// })
-
-// .then(response => response.json())
-// .then(data => {
-//     console.log("Réponse serveur :", data);
-//     // ici tu peux ajouter la redirection si tout s'est bien passé
-// })
-// .catch(error => {
-//     console.error("Erreur lors de la requête :", error);
-// });
-
-
 const formulaireLogin = document.querySelector(".login-form");
 
 formulaireLogin.addEventListener("submit", async function (event) {

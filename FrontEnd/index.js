@@ -63,7 +63,47 @@ function genererArticles(data) {
       gallery.appendChild(figureElement);
     }
   }
+ 
   
+// --- LOGIN / LOGOUT ---
+
+const editionBanner = document.querySelector(".edition");
+const btnLogin = document.getElementById("btnLogin");
+const btnLogout = document.getElementById("btnLogout");
+const menuCategories = document.getElementById("menu-categories");
+
+function majInterfaceConnexion() {
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    // MODE connecté
+    editionBanner.style.display = "block";
+    btnLogin.style.display = "none";
+    btnLogout.style.display = "list-item";
+    menuCategories.style.display = "none"; // cacher le menu de catégories
+    
+  } else {
+    // MODE non connecté
+    editionBanner.style.display = "none";
+    btnLogin.style.display = "list-item";
+    btnLogout.style.display = "none";
+    openModal.style.display = "none"; // cacher le bouton d'ouverture de la modale
+  }
+}
+
+// LOGOUT -- TOKEN EFFACÉ
+btnLogout.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("token");
+  majInterfaceConnexion();
+});
+
+// Mise à jour au chargement
+majInterfaceConnexion();
+
+
+
+
 // --- MENU DE CATEGORIES ---
 const categories = new Set(data.map(item => item.category.name)); 
 
