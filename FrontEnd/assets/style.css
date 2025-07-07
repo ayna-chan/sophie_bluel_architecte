@@ -210,7 +210,9 @@ a {
   margin-left: calc(-50vw + 50%);
 }
 
-
+.edition i {
+  margin-right: 8px;
+}
 
 /* --->> PAGE DE LOGIN --- */
 
@@ -264,7 +266,6 @@ a {
 
 /* <<--- PAGE DE LOGIN --- */
 
-/* page d'accueil bouton */
 .category-button {
 	width: auto;
 	padding: 5px 15px;
@@ -294,7 +295,8 @@ a {
 
 #openModal {
 	background: none;
-	border: none; 
+	border: none;
+	margin-left: 20px; 
  }
 
 
@@ -328,7 +330,7 @@ a {
 	align-items: center;
 	background: rgba(0, 0, 0, 0.08);
 	overflow: auto;
-  }
+}
   
 
 .modal-content {
@@ -338,33 +340,32 @@ a {
 	max-width: 600px;
 	width: 100%;
 	position: relative;
-	
-  }
+}
 
-  .photo-gallery {
+.photo-gallery {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
 	margin: 3em;
-  }
+}
 
-  .photo-gallery img {
+.photo-gallery img {
 	width: 90px;
 	object-fit: cover;
 	position: relative;
-  }
+}
 
-  .photo-container {
+.photo-container {
 	position: relative;
-  }
+}
 
-  .gallery-view {
+.gallery-view {
 	flex-direction: column;
 	justify-content: center;
-  }
+}
 
 /*  --BOUTON SUPPRIMER--  */
-  .delete-btn {
+.delete-btn {
 	position: absolute;
 	top: 5px; 
 	right: 5px; 
@@ -373,35 +374,42 @@ a {
 	border: none;
 	padding: 4px;
 	border-radius: 3px;
-  }
+}
 
 /* ----- VUE AJOUTER UNE PHOTO ----- */
-  #photoForm {
+#photoForm {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding: 20px 100px;
-  }
+}
 
-  .add-photo {
+.add-photo {
 	flex-direction: column;
-  }
-  
-  .add-photo h2 {
+}
+
+.add-photo h2 {
 	text-align: center;
 	margin-bottom: 25px;
 	font-size: 24px;
 	font-weight: 600;
-  }
+}
 
 .photoTitle, .photoCategory {
 	width: 100%;
 }
 
+.photoTitle input, .btnDropdown {
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border: none;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	box-sizing: border-box;
+}
 
-
-/* Zone d'ajout de photo */
 .inputAddPhoto {
 	background-color: #e8f1f6;
 	border-radius: 2px;
@@ -409,16 +417,16 @@ a {
 	padding: 25px 0px;
 	margin-bottom: 25px;
 	width: 100%;
-  }
+}
   
-  .inputAddPhoto i {
+.inputAddPhoto i {
 	font-size: 60px;
 	color: #b9c5cc;
 	display: flex;
 	flex-direction: column;
-  }
+}
   
-  .btnUploadPhoto {
+.btnUploadPhoto {
 	display: inline-block;
 	margin-top: 15px;
 	background-color: #cbdbe2;
@@ -428,58 +436,49 @@ a {
 	cursor: pointer;
 	font-weight: 500;
 	font-size: 14px;
-  }
+}
   
-  #uploadPhoto {
+#uploadPhoto {
 	display: none;
-  }
+}
   
-  #sizeInfo {
+#sizeInfo {
 	font-size: 12px;
 	margin-top: 10px;
-  }
+}
   
-  #imgPreview {
+#imgPreview {
 	max-height: 180px;
 	max-width: 80%;
-  }
+}
   
-  .photoTitle input, .btnDropdown {
-	width: 100%;
-	padding: 12px;
-	margin-bottom: 20px;
+
+
+.btn {
+	padding: 10px 50px;
+	border-radius: 20px;
+	background-color: #1D6154;
+	color:white;
 	border: none;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+	margin: 20px auto;
+	font-family: "Syne";
+}
 
 
-  
-
-  .btn {
-		padding: 10px 50px;
-		border-radius: 20px;
-		background-color: #1D6154;
-		color:white;
-		border: none;
-		margin: 20px auto;
-		font-family: "Syne";
-	}
-
-
-  .close {
+.close {
 	position: absolute;
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
-  }
+}
 
 
-  .separator {
+.separator {
 	border: none;
 	border-top: 1px solid #ccc;
 	margin: 2em 3em;
-  }
+}
 
-  #photoForm .separator {
+#photoForm .separator {
 	width: 100%;
-  }
+}

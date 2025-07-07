@@ -76,18 +76,19 @@ function majInterfaceConnexion() {
   const token = localStorage.getItem("token");
 
   if (token) {
-    // MODE connecté
+    // --- CONNECTÉ ---
     editionBanner.style.display = "block";
     btnLogin.style.display = "none";
     btnLogout.style.display = "list-item";
-    menuCategories.style.display = "none"; // cacher le menu de catégories
-    
+    menuCategories.style.display = "none";
+
   } else {
-    // MODE non connecté
+    // --- NON CONNECTÉ ---
     editionBanner.style.display = "none";
     btnLogin.style.display = "list-item";
     btnLogout.style.display = "none";
-    openModal.style.display = "none"; // cacher le bouton d'ouverture de la modale
+    openModal.style.display = "none"; 
+    menuCategories.style.display = ""; 
   }
 }
 
@@ -98,10 +99,7 @@ btnLogout.addEventListener("click", (e) => {
   majInterfaceConnexion();
 });
 
-// Mise à jour au chargement
 majInterfaceConnexion();
-
-
 
 
 // --- MENU DE CATEGORIES ---
@@ -237,22 +235,10 @@ const modal = document.getElementById('modal');
       addPhoto.style.display = 'flex';
     };
 
+
+    
 form.onsubmit = async (e) => {
   const fileInput = document.getElementById("uploadPhoto");
-
-  fileInput.addEventListener("change", () => {
-  const file = fileInput.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = () => {
-      const imgPreview = document.getElementById("imgPreview");
-      const container = document.getElementById("imgPreviewContainer");
-      imgPreview.src = reader.result;
-      container.style.display = "block";
-    };
-    reader.readAsDataURL(file);
-  }
-});
 
   e.preventDefault();
 
@@ -306,9 +292,17 @@ form.onsubmit = async (e) => {
       genererArticles(data); // mettre à jour la galerie principale
       afficherGalerieModale(data); // mettre à jour la galerie de la modale
       form.reset();
-      backBtn.click(); // revenir à la vue galerie
-      galleryView.style.display = 'flex';
-      addPhoto.style.display = 'none';  
+      const imgPreview = document.getElementById("imgPreview");
+      const imgPreviewContainer = document.getElementById("imgPreviewContainer");
+      imgPreview.src = "";
+      imgPreviewContainer.style.display = "none";
+      const fileLabel = document.getElementById("fileLabel");
+      fileLabel.style.display = ""; 
+      const iconPhoto = document.getElementById("iconPhoto");
+      iconPhoto.style.display = ""; 
+      const sizeInfo = document.getElementById("sizeInfo");
+      sizeInfo.style.display = "block";  
+
       alert("Photo ajoutée !");
     } else {
       alert("Erreur lors de l'ajout.");
